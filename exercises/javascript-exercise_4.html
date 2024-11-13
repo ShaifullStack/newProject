@@ -65,10 +65,11 @@
       :root {
         --text-color-1: #edda40;
         --text-color-3: #edda40;
+       
       }
     </style>
   </head>
-  <body id="home">
+  <body id="home" style="background-color: blanchedalmond;">
     <section class="full-h">
       <div class="container">
         <div style="display: flex; justify-content: space-between">
@@ -140,13 +141,20 @@ console.log(partialValue + ' ' + 'is' + ' ' + percentage.toFixed(2) + '%' + ' ' 
         <div class="questions-list lg"></div>
       </div>
     </section>
+    a. בקש מהמשתמש להכניס שני מספרים ושמור אותם כ-partialValue ו-totalValue.
+b. הדפס את האחוזים ש-partialValue מייצג מתוך totalValue.
+c. במקרה של 90 ו-180, הדפס "90 הוא 50% מתוך 180". אם התוצאה היא מספר עשרוני גדול, למד על השימוש בפונקציה .toFixed().
 
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        /* todo remove this line and start your answer */
+        var partialValue = + prompt(" enter a nuumber ")
+        var totalValue = + prompt("enter a second number ")
+        var parcent = (partialValue*100)/totalValue
+        var result = alert(` your number ${partialValue} of ${totalValue} parcent is  ${parcent.toFixed(2)} ` )
+
       };
     </script>
     <script>

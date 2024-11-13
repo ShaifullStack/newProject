@@ -124,14 +124,20 @@ alert('Hello ' + firstName + ' ' + lastName)
         <div class="questions-list lg"></div>
       </div>
     </section>
+    a. בקש מהמשתמש להכניס שם פרטי ושם משפחה.
+b. הצג התראה (alert) עם שמו המלא של המשתמש.
 
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
     <script src="src/prism.min.js"></script>
     <script>
-      const onSolution = () => {
-        /* todo remove this line and start your answer */
-      };
+     const onSolution = () => {
+        var firstName = prompt ("waht is ur fiest name ")
+        var lastName =  prompt("what is ur last Name")
+        var fullName = alert(`Hi ${firstName} ${lastName} Nice to meet u `)
+    
+     };
+    
     </script>
     <script>
       addLinksToAllExercise(47, "javascript");

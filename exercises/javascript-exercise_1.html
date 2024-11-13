@@ -128,14 +128,22 @@ console.log(numB , ' with the power of ', expo , ' is:', numB ** expo)
         <div class="questions-list lg"></div>
       </div>
     </section>
+    a. בקש מהמשתמש להכניס כל מספר ושמור אותו כ-numA.
+b. הדפס את תוצאת המספר בחזקה 2 (למשל 33, 1010 וכד').
+c. בקש מהמשתמש להכניס שני משתנים, numB ו-expo.
+d. הדפס את החזקה של המספרים. למשל, "3 עם חזקה של 4 הוא: 81".
 
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
     <script src="src/prism.min.js"></script>
     <script>
-      const onSolution = () => {
-        /* todo remove this line and start your answer */
-      };
+       const onSolution = () => {
+      var numA = + prompt (" enter a number  ");
+      var pow2 = + alert(" your number is pow 2 "+numA*numA)
+      var numB = + prompt("enter number one ")
+      var numC = + prompt("enter a second number ")
+      var result = + alert(" your two number is " +numB+numC*3*4)
+       };
     </script>
     <script>
       addLinksToAllExercise(47, "javascript");

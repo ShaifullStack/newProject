@@ -135,15 +135,21 @@ console.log('Your final balance is' + ' ' + '$' + usdBalance)
         <div class="questions-list lg"></div>
       </div>
     </section>
+    a. בקש מהמשתמש להכניס את כמות הביטקוין שברשותו ושמור אותה כמשתנה btcAmount.
+b. המרת את כמות הביטקוין לדולר ושמור אותה כמשתנה usdBalance.
+c. הדפס את היתרה הכוללת של המשתמש בדולרים. אם ביטקוין אחד שווה 19,300$, הדפס "יתרת הדולר שלך היא $19300".
 
     <script src="src/menu.min.js"></script>
     <script src="src/util.min.js"></script>
 
     <script src="src/prism.min.js"></script>
     <script>
-      const onSolution = () => {
-        /* todo remove this line and start your answer */
+       const onSolution = () => {
+      var btcAmount = + prompt("hi how much you have bitcoin");
+     var usdBalance = btcAmount*1930;
+     var result = + alert("you have a bitcoin " + usdBalance+"$")
       };
+   
     </script>
     <script>
       addLinksToAllExercise(47, "javascript");
