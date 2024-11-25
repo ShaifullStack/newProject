@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 8 עבודה עם תאריכים</title>
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים</title>
 
     <link
-      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_8.html"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
       rel="canonical"
     />
     <meta
-      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_8.html"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
       property="og:url"
     />
     <meta
@@ -18,7 +18,7 @@
       property="og:title"
     />
     <meta
-      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 8 עבודה עם תאריכים"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים"
       property="og:description"
     />
     <meta
@@ -36,7 +36,7 @@
       name="twitter:title"
     />
     <meta
-      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בתנאי סוויץ switch, שיעזור לנו בחלק מהמקרים לקצר ולפשט תנאים מורכבים וארוכים לקוד שהרבה יותר קל לקרוא ולהבין אותו."
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו  אנחנו מקבלים ערך לא ידוע."
       name="description"
     />
 
@@ -73,20 +73,21 @@
       <div class="container">
         <div style="display: flex; justify-content: space-between">
           <div class="bold">התקדמות שלך</div>
-          <div style="font-size: 32px">8/47</div>
+          <div style="font-size: 32px">10/47</div>
         </div>
         <div class="progress-bar">
-          <div class="bar" style="width: 16%"></div>
+          <div class="bar" style="width: 20%"></div>
         </div>
+
         <h1 class="x5 padding-top bold">
-          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 8
-          עבודה עם תאריכים
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 10
+          תנאים מורכבים
         </h1>
         <div class="separator green"></div>
         <h2>
-          בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בתנאי סוויץ switch, שיעזור
-          לנו בחלק מהמקרים לקצר ולפשט תנאים מורכבים וארוכים לקוד שהרבה יותר קל
-          לקרוא ולהבין אותו.
+          בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו
+          טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו אנחנו
+          מקבלים ערך לא ידוע וכל זאת בשימוש תנאי switch.
         </h2>
 
         <div class="padding-top">
@@ -100,85 +101,57 @@
 
         <ul style="direction: ltr">
           <li class="exercise-question">
-            a. <span class="prompt-color">prompt</span> the user and ask him
-            what day is it today (as number from 1-7).
+            a. consider this Tree of colors
+            <div>Red Tree: red, salmon, tomato, crimson</div>
+            <div>Green Tree: green, lime, teal</div>
+            <div>Yellow Tree: gold, yellow, khaki</div>
           </li>
           <li class="exercise-question">
-            b. <span class="prompt-color">prompt</span> how many days left until
-            friday.
-            <span class="string">"It's 3 Days Until Friday"</span>
+            b. <span class="prompt-color">prompt</span> the user to enter one of
+            his favorite color.
           </li>
           <li class="exercise-question">
-            c. <span class="bonus-color">Bonus:</span> if it's Thursday print
-            <span class="string">"Friday is tomorrow!"</span>.
+            c. <span class="print-color">print</span> the name of the group
+            related to his selection, if the user enters "red", print,
+            <span class="string">"red is part of the red tree"</span>
           </li>
           <li class="exercise-question">
-            d. <span class="bonus-color">Bonus:</span> if the number is not 1-7
-            print
-            <span class="string">"is it maayan calendar day or what?"</span>.
+            d. <span class="bonus-color">Bonus:</span> if the user didn't enter
+            any color that we can recognize, <span class="blue-f">print</span>
+            <span class="string">"is that a new color"?</span>
           </li>
         </ul>
 
         <div id="result" style="display: none; width: 100%">
           <pre><code class="language-js">
-var day = +prompt('Which day is today?')
-var daysUntilFriday
-var dayName
-
-switch (day) {
-    case 1:
-        dayName = 'Sunday'
-        daysUntilFriday = 5
+var color = prompt('Please enter your fav color!')
+switch (color) {
+    case 'red':
+    case 'salmon':
+    case 'tomato':
+    case 'crimson':
+        console.log(color, 'Belong to Red Tree.')
         break
-    case 2:
-        dayName = 'Monday'
-        daysUntilFriday = 4
+    case 'green':
+    case 'lime':
+    case 'teal':
+        console.log(color, 'Belong to Green Tree.')
         break
-    case 3:
-        dayName = 'Tuesday'
-        daysUntilFriday = 3
-        break
-    case 4:
-        dayName = 'Wednesday'
-        daysUntilFriday = 2
-        break
-    case 5:
-        dayName = 'Thursday'
-        daysUntilFriday = 1
-        break
-    case 6:
-        dayName = 'Friday'
-        daysUntilFriday = 0
-        break
-    case 7:
-        dayName = 'Saturday'
-        daysUntilFriday = 6
+    case 'gold':
+    case 'yellow':
+    case 'khaki':
+        console.log(color, 'Belong to Yellow Tree.')
         break
     default:
-        day = undefined
-        dayName = 'invalid day'
-}
-
-if (daysUntilFriday === 0) {
-    console.log('its Friday!')
-} else if (daysUntilFriday === 1) {
-    console.log('Friday is tomorrow!')
-} else if (day) {
-    console.log(
-        'today is',
-        dayName,
-        'its ' + daysUntilFriday + ' Days until Friday.'
-    )
-} else {
-    console.log('is it a maayan calendar or what?')
+        console.log('is that a new color?')
 }
             </code></pre>
         </div>
         <div class="navigation-buttons">
-          <a href="javascript-exercise_7.html">
+          <a href="javascript-exercise_9.html">
             <div class="custom-button">< לשאלה הקודמת</div>
           </a>
-          <a href="javascript-exercise_9.html">
+          <a href="./javascript-exercise_11.html">
             <div class="custom-button">לשאלה הבאה ></div>
           </a>
         </div>
@@ -194,7 +167,28 @@ if (daysUntilFriday === 0) {
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        /* todo remove this line and start your answer */
+       var colors =  prompt(" to enter one of his favorite color.")
+
+          switch (colors) {
+              case "red":
+              case "salmon":
+              case "tomato":
+              case "crimson":
+                  alert("   Red Tree is :" + colors )
+                  break;
+              case "green":
+              case "lime":
+              case "teal":
+                  alert("  Green Tree is :" + colors)
+                  break;
+              case "gold":
+              case "gold":
+              case "khaki":
+                  alert("   Yellow Tree is :" + colors)
+                  break;
+              default:
+                  alert("we can recognize, print is that a new color?")
+          }
       };
     </script>
     <script>

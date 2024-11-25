@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים</title>
+    <title>ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 6 ותק נהיגה</title>
 
     <link
-      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
+      href="https://www.doctorcode.org/courses/exercise/javascript-exercise_6.html"
       rel="canonical"
     />
     <meta
-      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_10.html"
+      content="https://www.doctorcode.org/courses/exercise/javascript-exercise_6.html"
       property="og:url"
     />
     <meta
@@ -18,7 +18,7 @@
       property="og:title"
     />
     <meta
-      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 10 תנאים מורכבים"
+      content="ג'אווה סקריפט המדריך המלא 2023 - תרגיל בית 6 ותק נהיגה"
       property="og:description"
     />
     <meta
@@ -36,7 +36,7 @@
       name="twitter:title"
     />
     <meta
-      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו  אנחנו מקבלים ערך לא ידוע."
+      content="בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בתנאים על מנת לקבוע ותק נהיגה של המשתמש, תחילה נקלוט מספר שישמש שנות נהיגה ואז באמצעות תנאי נבדוק את הותק."
       name="description"
     />
 
@@ -73,21 +73,21 @@
       <div class="container">
         <div style="display: flex; justify-content: space-between">
           <div class="bold">התקדמות שלך</div>
-          <div style="font-size: 32px">10/47</div>
+          <div style="font-size: 32px">6/47</div>
         </div>
         <div class="progress-bar">
-          <div class="bar" style="width: 20%"></div>
+          <div class="bar" style="width: 12%"></div>
         </div>
 
         <h1 class="x5 padding-top bold">
-          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 10
-          תנאים מורכבים
+          ג'אווה סקריפט המדריך המלא 2023 <br /><span>תנאים</span> תרגיל מספר 6
+          ותק נהיגה
         </h1>
         <div class="separator green"></div>
         <h2>
-          בתרגיל ג'אווה סקריפט הבא נלמד איך להגדיר מצבים שונים שדורשים אותו
-          טיפול בקוד במקרים מסויימים, אף נלמד איך להתמודד עם מצב שבו אנחנו
-          מקבלים ערך לא ידוע וכל זאת בשימוש תנאי switch.
+          בתרגיל ג'אווה סקריפט הבא נלמד איך להשתמש בתנאים על מנת לקבוע ותק נהיגה
+          של המשתמש, תחילה נקלוט מספר שישמש שנות נהיגה ואז באמצעות תנאי נבדוק את
+          הותק.
         </h2>
 
         <div class="padding-top">
@@ -101,57 +101,45 @@
 
         <ul style="direction: ltr">
           <li class="exercise-question">
-            a. consider this Tree of colors
-            <div>Red Tree: red, salmon, tomato, crimson</div>
-            <div>Green Tree: green, lime, teal</div>
-            <div>Yellow Tree: gold, yellow, khaki</div>
+            a. <span class="prompt-color">prompt</span> the user and ask him how
+            many years he's been driving.
           </li>
           <li class="exercise-question">
-            b. <span class="prompt-color">prompt</span> the user to enter one of
-            his favorite color.
+            b. <span class="function-color">if</span> he's been driving less
+            than 3 years, <span class="print-color">print</span>,
+            <span class="string">"You're a young driver!"</span>.
           </li>
           <li class="exercise-question">
-            c. <span class="print-color">print</span> the name of the group
-            related to his selection, if the user enters "red", print,
-            <span class="string">"red is part of the red tree"</span>
+            c. <span class="function-color">if</span> he's driving 3 years but
+            less than 6 years <span class="print-color">print</span
+            ><span class="string">"You shape some sidewalks don't you?"</span>.
           </li>
           <li class="exercise-question">
-            d. <span class="bonus-color">Bonus:</span> if the user didn't enter
-            any color that we can recognize, <span class="blue-f">print</span>
-            <span class="string">"is that a new color"?</span>
+            d. <span class="function-color">if</span> the user is driving 6
+            years or more,
+            <span class="print-color">print</span>
+            <span class="string">"can you be my private driver please?"</span>.
           </li>
         </ul>
 
         <div id="result" style="display: none; width: 100%">
           <pre><code class="language-js">
-var color = prompt('Please enter your fav color!')
-switch (color) {
-    case 'red':
-    case 'salmon':
-    case 'tomato':
-    case 'crimson':
-        console.log(color, 'Belong to Red Tree.')
-        break
-    case 'green':
-    case 'lime':
-    case 'teal':
-        console.log(color, 'Belong to Green Tree.')
-        break
-    case 'gold':
-    case 'yellow':
-    case 'khaki':
-        console.log(color, 'Belong to Yellow Tree.')
-        break
-    default:
-        console.log('is that a new color?')
+var drivingExp = +prompt('How many years you are driving?')
+
+if (drivingExp < 3) {
+    console.log(`You're a young driver!`)
+} else if (drivingExp >= 3 && drivingExp < 6) {
+    console.log('You shape some sidewalks dont you?')
+} else {
+    console.log('can you be my private driver please?')
 }
             </code></pre>
         </div>
         <div class="navigation-buttons">
-          <a href="javascript-exercise_9.html">
+          <a href="javascript-exercise_5.html">
             <div class="custom-button">< לשאלה הקודמת</div>
           </a>
-          <a href="./javascript-exercise_11.html">
+          <a href="javascript-exercise_7.html">
             <div class="custom-button">לשאלה הבאה ></div>
           </a>
         </div>
@@ -167,7 +155,23 @@ switch (color) {
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        /* todo remove this line and start your answer */
+        var isDrivering = +prompt(" כמה זמן יש לך רשיון ? ")
+        if (isDrivering <= 3) {
+          alert(" אתה נהג צעיר  ")
+        }
+        if (isDrivering < 6)
+          alert("אתה מעצב מדרכות ")
+        if (isDrivering >= 6) {
+          alert("רוצה להיות הנהג הפרטי ")
+        }
+        if (isDrivering == 0){
+          alert(" number nut valid put a number")
+        }
+        //   alert(" אתה נהג צעיר  ")
+        // } else
+        //   alert("אתה מעצב מדרכות ")
+        // }else if (isDrivering >= 6)
+        //   alert("רוצה להיות הנהג הפרטי ")
       };
     </script>
     <script>

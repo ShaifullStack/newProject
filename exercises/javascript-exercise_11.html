@@ -161,7 +161,24 @@ getUserAge()
     <script src="src/prism.min.js"></script>
     <script>
       const onSolution = () => {
-        /* todo remove this line and start your answer */
+        var userAge = + prompt(" what is your age ");
+        isUserAllowedWatching(userAge);
+        getUserAge();
+        function isUserAllowedWatching(userAge) {
+          if (userAge > 13){
+            alert(" you  can watch the movie  ")
+          }else
+          alert(" your kid you cant see the move  ")
+
+        }
+        return userAge;
+        function getUserAge(){
+          + prompt(" what is your age  ")
+
+          return isUserAllowedWatching()
+
+        }
+
       };
     </script>
     <script>
